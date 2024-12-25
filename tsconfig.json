@@ -23,7 +23,7 @@
       "@muc/context": ["src/context/context.ts"],
       "@muc/firebase": ["src/firebase/firebase.ts"],
       // "@muc/models": ["src/firebase/models/modals.ts"],
-      "@utils/*": ["src/utils/utils.ts"]
+      "@muc/utils": ["src/utils/utils.ts"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

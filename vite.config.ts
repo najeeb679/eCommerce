@@ -32,7 +32,7 @@ export default defineConfig({
         __dirname,
         "src/validations/validations.ts"
       ),
-      "@utils": path.resolve(__dirname, "./src/utils/utils.ts"),
+      "@muc/utils": path.resolve(__dirname, "./src/utils/utils.ts"),
     },
   },
 });
