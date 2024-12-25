@@ -1,11 +1,12 @@
-import { AppLayout } from '@muc/layout'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Auth = () => {
   return (
-    <AppLayout>
-      <h1>Auth.........</h1>
-    </AppLayout>
-  )
-}
+    <React.Fragment>
+      <Outlet/>
+    </React.Fragment>
+  );
+};
 
-export default Auth
+export default Auth;
