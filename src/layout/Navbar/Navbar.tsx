@@ -20,7 +20,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { navLink, searchBar } from "@utils";
+import { navLink, searchBar } from "@muc/utils";
 
 const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -61,6 +61,7 @@ const Navbar = () => {
           bgcolor: COLORS.white.main,
           alignItems: "center",
           borderBottom: `0.2px solid ${COLORS.gray.main}`,
+          overflow: "hidden",
         }}
       >
         {/* Logo Section */}
@@ -120,8 +121,10 @@ const Navbar = () => {
                   </ListItem>
                   <ListItem>
                     <Link
-                      href={ROUTES.CONTACT_PAGE}
-                      onClick={() => handleLinkClick(ROUTES.CONTACT_PAGE)}
+                      href={ROUTES.AUTHENTICATION.SIGNUP_FORM}
+                      onClick={() =>
+                        handleLinkClick(ROUTES.AUTHENTICATION.SIGNUP_FORM)
+                      }
                       sx={getLinkStyles(ROUTES.AUTHENTICATION.SIGNUP_FORM)}
                     >
                       Sign Up
@@ -134,7 +137,7 @@ const Navbar = () => {
         ) : (
           // Desktop View: Full Navigation Menu
           <>
-            <List sx={{ display: "flex", width: "25%" }}>
+            <List sx={{ display: "flex", width: "30%" }}>
               <ListItem>
                 <Link
                   href={ROUTES.HOME_PAGE}
@@ -164,8 +167,10 @@ const Navbar = () => {
               </ListItem>
               <ListItem>
                 <Link
-                  href={ROUTES.CONTACT_PAGE}
-                  onClick={() => handleLinkClick(ROUTES.CONTACT_PAGE)}
+                  href={ROUTES.AUTHENTICATION.SIGNUP_FORM}
+                  onClick={() =>
+                    handleLinkClick(ROUTES.AUTHENTICATION.SIGNUP_FORM)
+                  }
                   sx={getLinkStyles(ROUTES.AUTHENTICATION.SIGNUP_FORM)}
                 >
                   Sign Up
