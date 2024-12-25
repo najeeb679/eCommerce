@@ -17,7 +17,7 @@ export default defineConfig({
       "@muc/assets": path.resolve(__dirname, "src/assets"),
       "@muc/constants": path.resolve(__dirname, "src/constants/constants.ts"),
       "@muc/modules": path.resolve(__dirname, "src/modules/modules.ts"),
-      "@muc/screens": path.resolve(__dirname, "src/screens/screen.ts"),
+      "@muc/screens": path.resolve(__dirname, "src/screens/screens.ts"),
       "@muc/types": path.resolve(__dirname, "src/types/types.ts"),
       "@muc/routes": path.resolve(__dirname, "src/constants/routes.ts"),
       "@muc/router": path.resolve(__dirname, "src/core/core.ts"),
@@ -32,7 +32,7 @@ export default defineConfig({
         __dirname,
         "src/validations/validations.ts"
       ),
-      "@utils": path.resolve(__dirname, "./src/utils"),
+      "@utils": path.resolve(__dirname, "./src/utils/utils.ts"),
     },
   },
 });
