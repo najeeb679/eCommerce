@@ -1,4 +1,5 @@
 import { COLORS } from "@muc/constants";
+import { makeStyles } from "@mui/styles";
 import { Settings } from "react-slick";
 
 export const searchBar = {
@@ -140,3 +141,17 @@ export const advertisementTimeStyle = {
   borderRadius: "50%",
   bgcolor: COLORS.white.main,
 };
+
+export const useStyles = makeStyles({
+  dot: {
+    "& li button:before": {
+      fontSize: "12px !important",
+      color: `${COLORS.gray.darkGray} !important`,
+      opacity: "1 !important",
+    },
+    "& li.slick-active button:before": {
+      color: `${COLORS.primary.main} !important`,
+      opacity: "1 !important",
+    },
+  },
+});
