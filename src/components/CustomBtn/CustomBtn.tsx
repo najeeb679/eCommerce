@@ -12,6 +12,7 @@ interface ButtonProps {
   height?: string;
   isLoading?: boolean;
   icon?: React.ReactNode;
+  color?: string;
 }
 
 const CustomBtn: React.FC<ButtonProps> = (props) => {
@@ -25,6 +26,7 @@ const CustomBtn: React.FC<ButtonProps> = (props) => {
     height,
     icon,
     isLoading = false,
+    color,
   } = props || {};
   return (
     <Box>
@@ -33,19 +35,20 @@ const CustomBtn: React.FC<ButtonProps> = (props) => {
         variant={variant}
         onClick={onClick}
         disabled={disabled}
-        startIcon={icon}
+        endIcon={icon}
         sx={{
           display: "flex",
           boxShadow: "none",
           width: {
             md: width ? width : "auto",
             sm: width ? width : "auto",
-            xs:'100%'
+            xs: "100%",
           },
           height: {
             md: height ? height : "inherit",
             sm: height ? height : "inherit",
           },
+          color: color ? color : COLORS.dark.main,
           textTransform: "none",
           "&:hover": {
             bgcolor:

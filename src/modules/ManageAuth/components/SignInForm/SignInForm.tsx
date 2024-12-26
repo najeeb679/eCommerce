@@ -44,6 +44,7 @@ const SignInForm = () => {
             variant="contained"
             width="372px"
             type="submit"
+            color={`${COLORS.white.main}`}
           />
         </Box>
         <Typography

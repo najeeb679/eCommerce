@@ -22,7 +22,7 @@ const SignUpForm = () => {
     <FormProvider {...methods}>
       <AuthLayout>
         <Typography variant="h1">Create an account</Typography>
-        <Typography variant="body1" >Enter your details belows</Typography>
+        <Typography variant="body1">Enter your details belows</Typography>
         <Box
           component={"form"}
           pt={5}
@@ -51,6 +51,7 @@ const SignUpForm = () => {
             variant="contained"
             width="372px"
             type="submit"
+            color={`${COLORS.white.main}`}
           />
           <br />
           <CustomBtn
@@ -60,7 +61,10 @@ const SignUpForm = () => {
             icon={<Box component={"img"} src="/assets/icons/Google-icon.svg" />}
           />
         </Box>
-        <Typography variant="body1" sx={{ color: COLORS.gray.main, mt: 3,pb:3 }}>
+        <Typography
+          variant="body1"
+          sx={{ color: COLORS.gray.main, mt: 3, pb: 3 }}
+        >
           Already have account?{" "}
           <Link href={ROUTES.AUTHENTICATION.SIGNIN_FORM} sx={navLink}>
             Log in
