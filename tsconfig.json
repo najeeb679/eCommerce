@@ -14,7 +14,7 @@
       // "@muc/routes": ["src/constants/*"],
       "@muc/core": ["src/core/core.ts"],
       "@muc/screens": ["src/screens/screens.ts"],
-      "@muc/styles": ["src/styles/styles.ts"],
+      "@muc/styles": ["src/styles/theme.ts"],
       "@muc/layout": ["src/layout/layout.ts"],
       "@muc/hooks": ["src/hooks/hooks.ts"],
       "@muc/types": ["src/types/types.ts"],
