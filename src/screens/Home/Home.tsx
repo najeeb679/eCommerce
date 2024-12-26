@@ -1,11 +1,12 @@
-import { AppLayout } from '@muc/layout'
+import React from "react";
+import { HomeContainer } from "@muc/modules";
 
 const Home = () => {
   return (
-    <AppLayout>
-      <h1>Home.......</h1>
-    </AppLayout>
-  )
-}
+    <React.Fragment>
+      <HomeContainer/>
+    </React.Fragment>
+  );
+};
 
-export default Home
+export default Home;

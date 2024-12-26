@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { Footer, Navbar } from "@muc/layout";
 import { ReactNode } from "react";
 
@@ -10,7 +10,10 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
     <Box>
       <Navbar />
+      <Container maxWidth='lg'>
+
       {children}
+      </Container>
       <Footer />
     </Box>
   );

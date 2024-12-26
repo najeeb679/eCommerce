@@ -1,7 +1,12 @@
-import { AppLayout } from "@muc/layout";
+import { AboutContainer } from "@muc/modules";
+import React from "react";
 
 const About = () => {
-  return <AppLayout>About</AppLayout>;
+  return (
+    <React.Fragment>
+      <AboutContainer />
+    </React.Fragment>
+  );
 };
 
 export default About;

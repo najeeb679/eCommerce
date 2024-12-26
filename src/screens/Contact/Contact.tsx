@@ -1,10 +1,11 @@
-import { AppLayout } from '@muc/layout'
+import React from 'react'
+import { ContactContainer } from '@muc/modules'
 
 const Contact = () => {
   return (
-    <AppLayout>
-      <p>Contact..............</p>
-    </AppLayout>
+    <React.Fragment>
+      <ContactContainer/>
+    </React.Fragment>
   )
 }
 
