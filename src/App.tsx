@@ -1,14 +1,13 @@
-import { data } from "@muc/constants";
+import React from "react";
 
 const App = () => {
   return (
     <div>
       <h1>Hello E-commerce Site</h1>
-      {data.map((e) => (
-        <h1>{e}</h1>
-      ))}
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, veritatis?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem,
+        culpa nam consequuntur enim velit delectus aut dolorum quibusdam
+        consectetur nihil?
       </p>
     </div>
   );
