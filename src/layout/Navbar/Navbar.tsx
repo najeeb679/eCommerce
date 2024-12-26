@@ -20,7 +20,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { navLink, searchBar } from "@utils";
+import { navLink, searchBar } from "@muc/utils";
 
 const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
