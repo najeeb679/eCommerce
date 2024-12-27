@@ -13,6 +13,7 @@ const VoucherSlider = () => {
   const settings: Settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -21,33 +22,67 @@ const VoucherSlider = () => {
         <ul className={`${classes.dot} slick-dots`}>{dots}</ul>
       </Box>
     ),
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          appendDots: (dots) => (
+            <Box
+              position={"absolute"}
+              display={{ md: "flex", sm: "flex", xs: "none" }}
+              bottom={40}
+            >
+              <ul className={`${classes.dot} slick-dots`}>{dots}</ul>
+            </Box>
+          ),
+        },
+      },
+    ],
   };
 
   return (
-    <div className="slider-container" style={{ position: "relative" }}>
+    <Box
+      className="slider-container"
+      sx={{
+        position: "relative",
+        width: { md: "80%", sm: "100%", xs: "100%" },
+      }}
+    >
       <Slider {...settings}>
         {OFFER_VOUCHER.map((item) => (
           <Box key={item.id}>
             <Box
               display={"flex"}
-              justifyContent={"space-between"}
               bgcolor={COLORS.dark.main}
-              height={{ md: "344px" }}
+              height={{ md: "380px" }}
               color={COLORS.white.main}
             >
-              <Box p={8}>
+              <Box p={{ md: 8, sm: 5, xs: 2 }} width={"33%"}>
                 <Box
-                  sx={{ display: "flex", alignItems: "center", gap: "20px" }}
+                  sx={{
+                    display: { md: "flex", sm: "flex", xs: "none" },
+                    alignItems: "center",
+                    gap: "20px",
+                  }}
                 >
-                  <Box component={"img"} src={item.icons} />
-                  <Typography variant="h6">{item.title}</Typography>
+                  <Box
+                    component={"img"}
+                    src={item.icons}
+                    sx={{ width: "50px", height: "50px" }}
+                  />
+                  <Typography variant="h6">
+                    {item.categoryDescription}
+                  </Typography>
                 </Box>
                 <Typography
                   variant="h1"
-                  fontSize={"55px"}
+                  fontSize={{ md: "55px", sm: "40px", xs: "20px" }}
                   pt={3}
-                  lineHeight={"60px"}
-                  width={"500px"}
+                  lineHeight={{ md: "60px" }}
+                  width={{ md: "500px", sm: "350px", xs: "200px" }}
                   mb={2}
                 >
                   {item.title}
@@ -58,15 +93,23 @@ const VoucherSlider = () => {
                   title="Shop Now"
                   icon={<ArrowForward />}
                   width="113px"
+                  height="45px"
                   color={`${COLORS.white.main}`}
                 />
               </Box>
-              <Box component={"img"} src={item?.poster} />
+              <Box
+                component={"img"}
+                src={item?.poster}
+                sx={{
+                  width: { md: "100%", sm: "100%", xs: "100%" },
+                  height: { md: "100%", sm: "350px", xs: "100%" },
+                }}
+              />
             </Box>
           </Box>
         ))}
       </Slider>
-    </div>
+    </Box>
   );
 };
 

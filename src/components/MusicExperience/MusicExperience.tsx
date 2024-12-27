@@ -14,16 +14,16 @@ const MusicExperience = () => {
         display={"flex"}
         gap={"30px"}
         flexDirection={"column"}
-        pl={"56px"}
+        pl={{ md: "56px", sm: "30px", xs: 0 }}
       >
-        <Typography variant="body2" color="#00FF66" fontWeight={600}>
+        <Typography variant="body2" color="#00FF66" fontWeight={600} p={{md:0,sm:0,xs:2}}>
           Categories
         </Typography>
         <Typography
           variant="h1"
           color={COLORS.white.main}
-          fontSize="48px"
-          lineHeight={"60px"}
+          fontSize={{ md: "48px", sm: "30px", xs: "25px" }}
+          lineHeight={{ md: "60px", sm: "50px", xs: "30px" }}
           width={{ md: "473px", xs: "auto" }}
         >
           Enhance Your Music Experience
@@ -46,6 +46,7 @@ const MusicExperience = () => {
             bgcolor: "#00FF66",
             borderRadius: "4px",
             width: 171,
+            height: "45px",
           }}
         >
           Buy Now
@@ -73,22 +74,25 @@ const MusicExperience = () => {
               bgcolor: COLORS.white.main,
               left: "50%",
               opacity: 0.3,
-
               transform: "translateX(-50%)",
             }}
           />
           <Box
             component={"img"}
             src="assets/images/music-experince.svg"
-            width={"100%"}
+            width={{ md: "100%", sm: "70%", xs: "50%" }}
             height={"auto"}
             sx={{
-              filter: " blue(200)",
+              filter: "blur(200)",
               position: "absolute",
               zIndex: 99,
               top: "50%",
               left: "50%",
-              transform: "translate(-50%, -50%)",
+              transform: {
+                md: "translate(-50%, -50%)",
+                sm: "translate(-80%, -50%)",
+                xs: "translate(-100%, -150%)",
+              },
             }}
             alt="music"
           />
