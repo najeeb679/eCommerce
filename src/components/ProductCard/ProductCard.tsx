@@ -10,10 +10,9 @@ type dataType = {
 };
 
 const ProductCard = ({ data, topProduct }: dataType) => {
-  console.log(data);
   return (
     <Box display={"flex"} flexWrap={"wrap"}>
-      <Box sx={{ productCard, width: topProduct ? "285px" : "250px" }}>
+      <Box sx={{ productCard, width: topProduct ? "285px" : {md:"250px",sm:'300px',xs:'100%' }}}>
         <Box sx={insideProductCard}>
           <Box
             component={"img"}
@@ -39,11 +38,11 @@ const ProductCard = ({ data, topProduct }: dataType) => {
               variant="contained"
               sx={{
                 bgcolor: COLORS.dark.main,
-                width: "100%",
+                width: {md:"100%",sm:'100%',xs:'100%'},
                 position: "absolute",
                 bottom: "0%",
                 borderRadius: "0px 0px 4px 4px",
-                height: "46px",
+                height: {md:"46px",sm:'46px',xs:"50px"},
               }}
             >
               Add To Cart

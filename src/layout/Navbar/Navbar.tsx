@@ -88,7 +88,9 @@ const Navbar = () => {
               <Box
                 sx={{
                   padding: 2,
-                  bgcolor: COLORS.white.main,
+                  bgcolor: 'red',
+                  width:300,
+                  
                 }}
               >
                 <List>

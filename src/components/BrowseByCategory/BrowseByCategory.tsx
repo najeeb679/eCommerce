@@ -21,7 +21,12 @@ const BrowseByCategory = () => {
             alignItems: "center",
           }}
         >
-          <Typography variant="h1">Browse By Category</Typography>
+          <Typography
+            variant="h1"
+            sx={{fontSize:{md:'30px',sm:'auto',xs:'25px'}}}
+          >
+            Browse By Category
+          </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <Typography sx={arrowBtn}>
               <ArrowBack fontSize="small" />
@@ -31,7 +36,10 @@ const BrowseByCategory = () => {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", gap: "30px" }} my={2}>
+        <Box
+          sx={{ display: { md: "flex", sm: "flex", xs: "block" }, gap: "30px" }}
+          my={2}
+        >
           {PRODUCT_CATEGORIES.map((item, i) => (
             <Box
               key={i}

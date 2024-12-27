@@ -82,6 +82,7 @@ export const categoryStyle = {
   cursor: "pointer",
   width: "175px",
   height: "145px",
+  my: { md: 0, sm: 0, xs: 2 },
 };
 
 export const settings: Settings = {
@@ -102,11 +103,11 @@ export const settings: Settings = {
       },
     },
     {
-      breakpoint: 600,
+      breakpoint: 800,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 2.1,
         slidesToScroll: 2,
-        initialSlide: 2,
+        initialSlide: 1,
       },
     },
     {
@@ -132,8 +133,8 @@ export const musicAdvertisemnt = {
 };
 
 export const advertisementTimeStyle = {
-  width: "62px",
-  height: "62px",
+  width: { md: "62px", sm: "60px", xs: "50px" },
+  height: { md: "62px", sm: "60px", xs: "50px" },
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -146,6 +147,8 @@ export const useStyles = makeStyles({
   dot: {
     "& li button:before": {
       fontSize: "12px !important",
+      boxShadow: "inset 2px 5px 8px gray",
+      borderRadius: "50px",
       color: `${COLORS.gray.darkGray} !important`,
       opacity: "1 !important",
     },
