@@ -1,4 +1,9 @@
-import { productCardType } from "@muc/types";
+import {
+  categoryTypes,
+  productCardType,
+  topSellingProducts,
+  voucherTypes,
+} from "@muc/types";
 
 export const PRODUCT_CARD: productCardType[] = [
   {
@@ -67,7 +72,7 @@ export const PRODUCT_CARD: productCardType[] = [
   },
 ];
 
-export const PRODUCT_CATEGORIES = [
+export const PRODUCT_CATEGORIES: categoryTypes[] = [
   {
     img: "/assets/icons/CellPhone.svg",
     title: "Phone",
@@ -94,7 +99,7 @@ export const PRODUCT_CATEGORIES = [
   },
 ];
 
-export const TOP_SELLING_PRODUCTS = [
+export const TOP_SELLING_PRODUCTS: topSellingProducts[] = [
   {
     id: 1,
     poster: "/assets/images/topselling1.svg",
@@ -164,7 +169,7 @@ export const EXPLORE_OUR_PRODUCTS: productCardType[] = [
   },
 ];
 
-export const OFFER_VOUCHER = [
+export const OFFER_VOUCHER: voucherTypes[] = [
   {
     id: 1,
     categories: "Mobile",
