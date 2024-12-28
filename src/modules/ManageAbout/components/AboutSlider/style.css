@@ -1,0 +1,25 @@
+/* Styling for all dots (inactive state) */
+.slick-dots li button:before {
+    color:black ; 
+    font-size: 12px ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+  }
+  
+  
+  .slick-dots li.slick-active button:before {
+    color:lightcoral !important; 
+    background-color:white; 
+    border: 2px solid gray ; 
+    
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+
+  }
+  
+
+  
